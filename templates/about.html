@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - SAI SURENDRA KUMAR BORUSU</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .about-page {
+            padding: 100px 0;
+            background: #f8f9fa;
+        }
+
+        .education-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #ff6b6b;
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: 50px;
+            width: 50%;
+            padding-right: 40px;
+        }
+
+        .education-item:nth-child(even) {
+            margin-left: 50%;
+            padding-right: 0;
+            padding-left: 40px;
+        }
+
+        .education-item::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff6b6b;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #ff6b6b;
+        }
+
+        .education-item:nth-child(even)::before {
+            right: auto;
+            left: -10px;
+        }
+
+        .education-content {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .education-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-year {
+            color: #ff6b6b;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .education-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .education-school {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .education-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff6b6b;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: 30px;
+            transition: all 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .education-timeline::before {
+                left: 20px;
+            }
+
+            .education-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .education-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 50px;
+            }
+
+            .education-item::before {
+                left: 10px;
+                right: auto;
+            }
+
+            .education-item:nth-child(even)::before {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="{{ url_for('home') }}">SSKB</a>
+        </div>
+        <div class="nav-menu">
+            <ul class="nav-list">
+                <li><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link active">About</a></li>
+                <li><a href="{{ url_for('home') }}#skills" class="nav-link">Skills</a></li>
+                <li><a href="{{ url_for('home') }}#projects" class="nav-link">Projects</a></li>
+                <li><a href="{{ url_for('home') }}#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Page Content -->
+    <section class="about-page">
+        <div class="container">
+            <div class="education-section">
+                <h2 class="section-title">Education Journey</h2>
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-content">
+                            <div class="education-year">2020 - 2024</div>
+                            <h3 class="education-title">Bachelor of Technology in Computer Science</h3>
+                            <div class="education-school">Jawaharlal Nehru Technological University, Hyderabad</div>
+                            <p class="education-description">
+                                Focused on Data Analytics and Web Development. Participated in various coding competitions and hackathons. Maintained a strong academic record while actively engaging in practical projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-content">
+                            <div class="education-year">2018 - 2020</div>
+                            <h3 class="education-title">Intermediate Education</h3>
+                            <div class="education-school">Sri Chaitanya Junior College, Hyderabad</div>
+                            <p class="education-description">
+                                Completed intermediate education with a focus on Mathematics and Computer Science. Developed strong analytical and problem-solving skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-content">
+                            <div class="education-year">2017 - 2018</div>
+                            <h3 class="education-title">Secondary School Certificate</h3>
+                            <div class="education-school">ZP High School, Hyderabad</div>
+                            <p class="education-description">
+                                Completed secondary education with distinction. Developed interest in technology and programming during this period.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ url_for('home') }}" class="back-button">Back to Home</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html> 
